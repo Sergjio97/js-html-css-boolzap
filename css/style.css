@@ -33,17 +33,60 @@ body {
 }
 
 /* colonna sinistra */
-
 .col-sn {
     width: 30%;
     height: 100%;
     background-color: burlywood;
 }
 
-/* colonna destra */
+.user-col {
+    width: 100%;
+    height: 8%;
+    background-color: #EAEAEA;
+    border-right: 1px solid lightgrey;
+}
 
+.notifiche {
+    width: 100%;
+    height: 9%;
+    background-color: #8EDAFC;
+}
+
+.search-col {
+    width: 100%;
+    height: 6%;
+    background-color: #fff;
+    border-right: 1px solid lightgrey;
+}
+
+.friends-list {
+    width: 100%;
+    height: calc(100% - 23%);
+    background-color: red;
+    border-right: 1px solid lightgrey;
+}
+
+/* colonna destra */
 .col-dx {
     width: 70%;
     height: 100%;
     background-color: royalblue;
+}
+
+.friend-col {
+    width: 100%;
+    height: 8%;
+    background-color: #EAEAEA;
+}
+
+.chat-col {
+    width: 100%;
+    height: calc(100% - 16%);
+    background-image: url(../img/mine.jpg);
+}
+
+.chat-options {
+    width: 100%;
+    height: 8%;
+    background-color: #F3EEEA;
 }
