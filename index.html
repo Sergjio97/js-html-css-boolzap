@@ -70,7 +70,7 @@
                     <!-- lista amici -->
                     <div class="friends-list">
 
-                        <div class="list-item" v-for="(contact, index) in contacts" @click="selectContact(index)">
+                        <div class="list-item" :class="index == currentContact ? 'active' : Null " v-for="(contact, index) in contacts" @click="selectContact(index)">
                             <img :src="Avatar(index)">
                             <div class="list-name">
                                 <h3>{{contact.name}}</h3>
@@ -141,7 +141,7 @@
                         <div class="smile">
                             <i class="far fa-smile"></i>
                         </div>
-                        <input type="text" placeholder="Scrivi un messaggio">
+                        <input type="text" placeholder="Scrivi un messaggio" v-model="inputValue" @keyup.enter="addMex(), risposta()">
                         <div class="mic">
                             <i class="fas fa-microphone"></i>
                         </div>
@@ -159,6 +159,7 @@
     
     <!-- development version, includes helpful console warnings -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
     <script src="js/script.js"></script>
 
 </body>

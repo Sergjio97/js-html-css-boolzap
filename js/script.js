@@ -84,6 +84,7 @@ const app = new Vue ({
         ],
 
         currentContact: 0,
+        inputValue: "",
     },
 
     methods: {
@@ -93,6 +94,22 @@ const app = new Vue ({
 
         selectContact: function(index) {
             this.currentContact = index
+        },
+
+        addMex: function () {
+            this.contacts[this.currentContact].messages.push({
+                date: dayjs(),
+                message: this.inputValue,
+                status: 'sent'
+            })
+        },
+
+        risposta: function() {
+            this.contacts[this.currentContact].messages.push({
+                date: dayjs(),
+                message: 'ok',
+                status: 'received'
+            })
         },
     }    
 })
