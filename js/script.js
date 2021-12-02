@@ -82,11 +82,17 @@ const app = new Vue ({
                 ],
             },
         ],
+
+        currentContact: 0,
     },
 
     methods: {
         Avatar: function (index) {
           return `img/avatar${this.contacts[index].avatar}.jpg`
+        },
+
+        selectContact: function(index) {
+            this.currentContact = index
         },
     }    
 })

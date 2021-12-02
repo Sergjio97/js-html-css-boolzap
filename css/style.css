@@ -148,6 +148,7 @@ body {
     height: 11%;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 .list-item img {
@@ -231,31 +232,41 @@ body {
     height: 90%;
 }
 
-.inviato-box {
-    width: 100%;
-    height: 12%;
+
+.messaggio {
+    max-width: 40%;
+    margin-bottom: 20px;
+    height: 60px;
+    border-radius: 10px;
+}
+
+.messaggio.sent {
+    margin-left: auto;
+    background-color: #d5f9ba;
+}
+
+.messaggio.received{
+    margin-right: auto;
+    background-color: #fff;
+}
+
+.text {
+    text-align: left;
+    vertical-align: middle;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.data {
+    height: 20%;
     display: flex;
     justify-content: flex-end;
-}
-
-.inviato {
-    width: 40%;
-    height: 90%;
-    border-radius: 10px;
-    background-color: #D5F9BA;
-}
-
-.ricevuto-box {
-    width: 100%;
-    height: 12%;
-    display: flex;
-}
-
-.ricevuto {
-    width: 40%;
-    height: 90%;
-    border-radius: 5px;
-    background-color: #fff;
+    align-items: center;
+    margin-right: 20px;
+    color: gray;
+    font-size: 12px;
 }
 
 .chat-options {

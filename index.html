@@ -70,8 +70,8 @@
                     <!-- lista amici -->
                     <div class="friends-list">
 
-                        <div class="list-item" v-for="(contact, index) in contacts">
-                            <img :src="Avatar(index)" :alt="contact.avatar">
+                        <div class="list-item" v-for="(contact, index) in contacts" @click="selectContact(index)">
+                            <img :src="Avatar(index)">
                             <div class="list-name">
                                 <h3>{{contact.name}}</h3>
                             </div>
@@ -93,11 +93,11 @@
                         <div class="friend-account">
 
                             <div class="friend-image">
-                                <img src="img/avatar_1.jpg" alt="">
+                                <img :src="Avatar(currentContact)" :alt="contacts[currentContact].name">
                             </div>
                             
                             <div class="friend-name">
-                                <h3>Michele</h3>
+                                <h3>{{contacts[currentContact].name}}</h3>
                                 <span>Ultimo accesso alle</span>
                             </div>
 
@@ -118,12 +118,17 @@
 
                         <div class="chat-box">
 
-                            <div class="inviato-box">
-                                <div class="inviato"></div>
-                            </div>
+                            <div class="messaggio-box" v-for="mex in contacts[currentContact].messages">
 
-                            <div class="ricevuto-box">
-                                <div class="ricevuto"></div>
+                                <div class="messaggio" :class="mex.status">
+                                    <div class="text" >
+                                        <span>{{mex.message}}</span>
+                                    </div>
+                                    <div class="data">
+                                        <span>{{mex.date}}</span>
+                                    </div>
+                                </div>
+                                
                             </div>
 
                         </div>
