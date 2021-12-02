@@ -70,11 +70,10 @@
                     <!-- lista amici -->
                     <div class="friends-list">
 
-                        <div class="list-item">
-
-                            <img src="img/avatar_1.jpg" alt="">
+                        <div class="list-item" v-for="(contact, index) in contacts">
+                            <img :src="Avatar(index)" :alt="contact.avatar">
                             <div class="list-name">
-                                <h3>Michele</h3>
+                                <h3>{{contact.name}}</h3>
                             </div>
                         </div>
 
@@ -88,15 +87,60 @@
                 <div class="col-dx">
 
                     <!-- colonna dell'amico -->
-                    <div class="friend-col"></div>
+                    <div class="friend-col">
+
+                        <!-- account amico -->
+                        <div class="friend-account">
+
+                            <div class="friend-image">
+                                <img src="img/avatar_1.jpg" alt="">
+                            </div>
+                            
+                            <div class="friend-name">
+                                <h3>Michele</h3>
+                                <span>Ultimo accesso alle</span>
+                            </div>
+
+                        </div>
+                        <!-- /account amico -->
+
+                        <div class="friend-options">
+                            <i class="fas fa-search"></i>
+                            <i class="fas fa-paperclip"></i>
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
+
+                    </div>
                     <!-- /colonna dell'amico -->
 
                     <!-- colonna della chat -->
-                    <div class="chat-col"></div>
+                    <div class="chat-col">
+
+                        <div class="chat-box">
+
+                            <div class="inviato-box">
+                                <div class="inviato"></div>
+                            </div>
+
+                            <div class="ricevuto-box">
+                                <div class="ricevuto"></div>
+                            </div>
+
+                        </div>
+
+                    </div>
                     <!-- /colonna della chat -->
 
                     <!-- opzioni della chat -->
-                    <div class="chat-options"></div>
+                    <div class="chat-options">
+                        <div class="smile">
+                            <i class="far fa-smile"></i>
+                        </div>
+                        <input type="text" placeholder="Scrivi un messaggio">
+                        <div class="mic">
+                            <i class="fas fa-microphone"></i>
+                        </div>
+                    </div>
                     <!-- /opzioni della chat -->
 
                 </div>
