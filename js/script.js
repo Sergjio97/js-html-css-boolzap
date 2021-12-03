@@ -113,12 +113,18 @@ const app = new Vue ({
             })
         },
 
-        searchUser: function(cercaUtenti) {
-            if(this.contacts.name.include(this.cercaUtenti) == false){
-                this.contacts.visible == false
-            } else {
-                this.contacts.visible == true
-            }
-        }
+        // searchUser: function() {
+        //     for(let i = 0; i < this.contacts.length; i++){
+        //         if(!(this.contacts[i].name.toLowerCase().include(this.cercaUtenti.toLowerCase()))){
+        //             this.contacts[i].visible == false
+        //         } 
+                
+        //         if (this.cercaUtenti == ""){
+        //             for(let i = 0; i < this.contacts.length; i++){
+        //                 this.contacts[i].visible == true
+        //             }
+        //         }
+        //     }
+        // }   ****NON FUNZIONA****
     }    
 })
