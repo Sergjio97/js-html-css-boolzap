@@ -85,6 +85,7 @@ const app = new Vue ({
 
         currentContact: 0,
         inputValue: "",
+        cercaUtenti: "",
     },
 
     methods: {
@@ -111,5 +112,13 @@ const app = new Vue ({
                 status: 'received'
             })
         },
+
+        searchUser: function(cercaUtenti) {
+            if(this.contacts.name.include(this.cercaUtenti) == false){
+                this.contacts.visible == false
+            } else {
+                this.contacts.visible == true
+            }
+        }
     }    
 })

@@ -58,10 +58,10 @@
                     <div class="search-col">
 
                         <div class="search-icon">
-                            <i class="fas fa-search"></i>
+                            <i class="fas fa-search" @click="searchUser(cercaUtenti)"></i>
                         </div>
                         <div class="search-input">
-                            <input type="text" placeholder="Cerca o inizia una nuova chat">
+                            <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="cercaUtenti">
                         </div>
 
                     </div>
